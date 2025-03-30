@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Traffic Accident Risk Prediction Using Machine Learning </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+
+    <!-- Libraries Stylesheet -->
+    <link href="../static/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../static/css/upload.css" rel="stylesheet">
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/lib/easing/easing.min.js"></script>
+    <script src="../static/lib/waypoints/waypoints.min.js"></script>
+    <script src="../static/lib/counterup/counterup.min.js"></script>
+    <script src="../static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="../static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="../static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="../static/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../static/js/main.js"></script>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
+            <a href="{{url_for('index')}}" class="navbar-brand ml-lg-3">
+                <h1 class="m-0 text-primary"><span class="text-dark">Traffic </span> Accident</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
+                <div class="navbar-nav m-auto py-0">
+                <a href="{{url_for('index')}}" class="nav-item nav-link active">Home</a>
+                    <a href="{{url_for('login')}}" class="nav-item nav-link">Login</a>
+					  <a href="{{url_for('upload')}}" class="nav-item nav-link">Upload</a>
+                    <a href="{{url_for('index')}}" class="nav-item nav-link">Logout</a>
+                </div>
+               
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+<div class="jumbotron jumbotron-fluid bg-jumbotron" style="margin-bottom: 5px;">
+    <div class="container text-center py-5">
+        <h3 class="text-white display-3 mb-4">Road Accident</h3>
+    </div>
+</div>
+<!-- Header End -->
+
+    <!-- Service Start -->
+    <div class="container-fluid px-0 py-5 my-5">
+        <div class="row mx-0 justify-content-center text-center">
+            <div class="col-lg-6">
+                <h1>Road Accident Prediction</h1>
+            </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 text-center" >
+            <form action="http://localhost:5000/preview" name="fs" id="fs" method="post" enctype="multipart/form-data">
+                    <br/>
+                    <input type="file" name="datasetfile" id="file1" />
+                    <button type="button" id="defaultFileButton">Upload Default File</button>
+                    <br/><br/><br/>
+                    <input type="submit"   value="Upload">
+            </form>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Footer Start -->
+    <div class="footer container-fluid position-relative bg-dark py-5" style="margin-top: 90px;">
+        <div class="container pt-5" />
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <script>
+        document.getElementById("defaultFileButton").addEventListener("click", function() {
+            document.getElementById("fs").submit();
+                alert("Default file selected from repository.");
+                // You can make an API call here to fetch a default file.
+        });
+    </script>
+    <script>
+        function selectDefaultFile() {
+            console.log("hi")
+            // Simulated file selection from the repository
+            const defaultFilePath = "C:\JPPY2236\SOURCE CODE\Accident_Vehical\upload.csv"; // Change this to your repo file path
+            const fileInput = document.getElementById("file1");
+
+            // Creating a File object dynamically is not possible for security reasons.
+            // Instead, you may need to fetch the file from the server and populate it programmatically.
+
+            alert("Default file selected: " + defaultFilePath);
+        }
+    </script>
+</body>
+
+</html>

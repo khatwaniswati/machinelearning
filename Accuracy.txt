@@ -1,0 +1,9 @@
+Traffic Accident Risk Prediction using machine learning
+
+Algorithm / Model Used: Random Forest Classifier.
+
+Training Accuracy : 0.99
+Test Accuracy: 0.88.
+
+
+
